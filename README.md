@@ -5,7 +5,7 @@ Using data of Beatles lyrics from The Guardian’s datablog (https://www.theguar
 
 For this “The Beatles Hangman” game, the second player will be the computer, who will be picking a word at random. The user has 8 guesses and with each guess the computer will print out the result and remaining available characters. These are words found in The Beatles' lyrics, so we’ll see if you are a true fan! ;)
 
-You can download the code and text file to start playing, but don't forget to put both files in the same folder so it will load properly.
+You can download the code and text file to start playing, but don't forget to put both files in the same folder so the program will load properly.
 Have fun playing the game!
 
 See below for a sample of a successful game...
