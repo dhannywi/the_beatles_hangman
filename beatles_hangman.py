@@ -2,10 +2,6 @@
 #
 
 # -----------------------------------
-# Helper code
-# You don't need to understand this helper code,
-# but you will have to know how to use the functions
-# (so be sure to read the docstrings!)
 
 import random
 
@@ -158,13 +154,7 @@ def hangman(secretWord):
         	continue
 
 
-
-
-
-
-# When you've completed your hangman function, uncomment these two lines
-# and run this file to test! (hint: you might want to pick your own
-# secretWord while you're testing)
+# let's play!
 
 secretWord = chooseWord(wordlist).lower()
 hangman(secretWord)
