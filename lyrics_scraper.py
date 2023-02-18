@@ -3,3 +3,5 @@
 import requests
 
 # make Genius API calls
+def get_lyrics():
+    pass
