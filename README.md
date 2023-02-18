@@ -1,5 +1,7 @@
 # The Beatles Hangman
-"The Beatles" themed interactive Hangman wordgame
+![The Beatles](https://github.com/dhannywi/the_beatles_hangman/blob/main/beatles_img.jpg)
+
+The Beatles Hangman is "The Beatles" themed interactive Hangman wordgame.
 
 Using Beatles lyrics data from [The Guardian’s datablog](https://www.theguardian.com/music/datablog/2010/nov/16/beatles-lyrics-words-music-itunes), I decided to add a twist to the interactive Hangman wordgame that I did for  MITx: 6.00.1x “Introduction to Computer Science and Programming Using Python” course.
 
@@ -8,7 +10,7 @@ For this “The Beatles Hangman” game, the second player will be the computer,
 You can download the code and text file to start playing, but don't forget to put both files in the same folder so the program will load properly.
 Have fun playing the game!
 
-See below for a sample of a successful game...
+A successful game will look similar to the example below:
 
 ```
 Loading word list from file...
