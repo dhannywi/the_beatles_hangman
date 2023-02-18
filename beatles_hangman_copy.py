@@ -81,54 +81,56 @@ def getAvailableLetters(lettersGuessed):
     
     return ''.join(alphabet)
 
-def hangman(secretWord):
+def hangman(secretWord, lettersGuessed):
 	'''
 	Args:
 		secretWord (string): The secret word to guess.
 	Returns:
 		result (str): Current state of the game.
 	'''
-	# count lives
 	lives = 8
-	lettersGuessed = []
-
-	# game start!
 	while lives > 0:
+		print(f'{"-"*25}\nYou have {lives} guesses left.')
+		print(f'Available characters: {getAvailableLetters(lettersGuessed)}')
+		guess = str(input('Please guess a character: ')).lower()
 		if isWordGuessed(secretWord, lettersGuessed) == False:
-			print(f'{"-"*15}\nYou have {lives} guesses left.')
-			print(f'Available characters: {getAvailableLetters(lettersGuessed)}')
-			guess = str(input('Please guess a character: ')).lower()
 			if guess in secretWord and guess not in lettersGuessed:
 				lettersGuessed.append(guess)
 				print(f'Good guess: {getGuessedWord(secretWord, lettersGuessed)}')
 			elif guess in lettersGuessed:
-				print(f"Oops! You've already guessed that character: {getGuessedWord(secretWord, lettersGuessed)")
+				print(f"Oops! You've already guessed that character: {getGuessedWord(secretWord, lettersGuessed)}")
 				lettersGuessed.append(guess)
-				mistakesMade += 1
-		else:
-			return f'{"-"*15}\nCongratulations, you are a true fan!'
-	return f'{"-"*15}\nSorry, you ran out of guesses. The word was: {secretWord}'
+			elif guess not in secretWord:
+				print(f'Oops! That character is not in my word: {getGuessedWord(secretWord, lettersGuessed)}')
+				lettersGuessed.append(guess)
+				lives -= 1
+			
+def game_result(secretWord, lettersGuessed):
+	'''
+	Takes in the word user is gussing and a list of guessed characters, returns the result of the game.
+	Args:
+		secretWord (str): The word the user is guessing.
+		lettersGuessed (list): A list of letters the user guessed.
+	Returns:
+		result (str): The game results.
+	'''
+	if isWordGuessed(secretWord, lettersGuessed) == False:
+		return f'{"-"*25}\nSorry, you ran out of guesses. The word was: {secretWord}'
+	else:
+		return f'{"-"*25}\nCongratulations, you are a true fan!'
 
 def main():
-    '''
-	Starts up an interactive game of Hangman.
-
-    * At the start of the game, lets the user know how many 
-      letters the secretWord contains.
-
-    * Ask the user to supply one guess (i.e. letter) per round.
-
-    * The user receives feedback immediately after each guess 
-      about whether their guess appears in the computers word.
-
-    * After each round, program displays to the user the partially
-	  guessed word so far, as well as letters that the 
-      user has not yet guessed.
 	'''
-	# Load the list of words into the variable wordlist so that it can be accessed from anywhere in the program
+	Starts up an interactive game of Hangman.
+	* At the start of the game, lets the user know how many letters the secretWord contains.
+	* Ask the user to supply one guess (i.e. letter) per round.
+	* The user receives feedback immediately after each guess about whether their guess appears in the computers word.
+	* After each round, program displays to the user the partially guessed word so far, as well as letters that the user has not yet guessed.
+	'''
 	wordlist = loadWords()
-	
+
 	# let's play!
+	lettersGuessed = []
 	secretWord = chooseWord(wordlist).lower()
 	print(f'''
 ****************************************************
@@ -145,7 +147,8 @@ Hello Beatlemaniacs, welcome to the game!
 I am thinking of a word that is {len(secretWord)} characters long.
 	''')
 
-	hangman(secretWord)
+	hangman(secretWord, lettersGuessed)
+	game_result(secretWord, lettersGuessed)
 
 if __name__ == '__main__':
 	main()
