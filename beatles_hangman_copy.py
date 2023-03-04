@@ -9,9 +9,8 @@ def loadWords():
     """
     Loads words from a file, returns a list of valid words. Words are strings of lowercase letters.
     Depending on the size of the word list, this function may take a while to finish.
-	
-	Returns:
-		wordlist (list): list of words (str).
+    Returns:
+    	wordlist (list): list of words (str).
     """
     print("\nLoading word list from file...")
     # inFile: file
@@ -25,12 +24,11 @@ def loadWords():
 
 def chooseWord(wordlist):
     """
-	Iterates through a list of words, returns a word from wordlist at random.
-
-	Args:
+    Iterates through a list of words, returns a word from wordlist at random.
+    Args:
     	wordlist (list): list of words (str).
-	Returns:
-		result (str): a random word.
+    Returns:
+	result (str): a random word.
     """
     return random.choice(wordlist)
 
