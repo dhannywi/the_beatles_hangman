@@ -1,14 +1,30 @@
 # The Beatles Hangman
 ![The Beatles](https://github.com/dhannywi/the_beatles_hangman/blob/main/beatles_img.jpg)
 
-The Beatles Hangman is "The Beatles" themed interactive Hangman wordgame.
+The Beatles Hangman is **"The Beatles"** themed interactive Hangman wordgame.
 
 Using Beatles lyrics data from [The Guardian’s datablog](https://www.theguardian.com/music/datablog/2010/nov/16/beatles-lyrics-words-music-itunes), I decided to add a twist to the interactive Hangman wordgame that I did for  MITx: 6.00.1x “Introduction to Computer Science and Programming Using Python” course.
 
-For this “The Beatles Hangman” game, the second player will be the computer, who will be picking a word at random. The user has 8 guesses and with each guess the computer will print out the result and remaining available characters. These are words found in The Beatles' lyrics, so we’ll see if you are a true fan! ;)
+For this game, the second player will be the computer, who will be picking a word at random. The user has 8 guesses, and with each guess the computer will print out the result and remaining available characters. These are words found in The Beatles' lyrics, so we’ll see if you are a true fan! ;)
 
-You can download the code and text file to start playing, but don't forget to put both files in the same folder so the program will load properly.
-Have fun playing the game!
+## Implementation
+This project uses **Python 3.8.10**, you can download Python [here](https://www.python.org/).
+Specific Python dependencies are used, and some need to be installed prior to running the scripts:
+* `random`
+* `re`
+* `os`
+* `requests`: execute `pip install requests`
+* `BeautifulSoup`: execute `pip install beautifulsoup4`
+
+We are utilizing Genius.com API to scrape the lyrics. Get your free Client Access Token key by following the instructions [here](https://docs.genius.com/#/getting-started-h1) prior to running the program.
+
+## Getting started
+* Start by cloning the repository: `https://github.com/dhannywi/the_beatles_hangman.git`
+* Change directory to the lyrics scraper folder by executing `cd .\the_beatles_hangman\scraper\`
+
+## Usage
+* Once the lyrics are loaded, change directory to `game_code` by executing the command `cd .\the_beatles_hangman\game_code\`
+* Execute `python3 beatles_hangman.py` to start playing the game!
 
 A successful game will look similar to the example below:
 
@@ -110,3 +126,13 @@ Good guess: postman
 Congratulations, you are a true fan!
 
 ```
+
+Have fun playing the game!
+
+## Resources
+* [Scraping song lyrics tutorial](https://medium.com/analytics-vidhya/how-to-scrape-song-lyrics-a-gentle-python-tutorial-5b1d4ab351d2)
+* [Genius API](https://docs.genius.com/#/getting-started-h1)
+
+## Authors
+Dhanny Indrakusuma <br>
+dhannywi@utexas.edu
