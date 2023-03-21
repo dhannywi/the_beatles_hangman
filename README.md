@@ -6,7 +6,7 @@
 
 The Beatles Hangman is **"The Beatles"** themed interactive Hangman wordgame.
 
-Using Beatles lyrics data from [The Guardian’s datablog](https://www.theguardian.com/music/datablog/2010/nov/16/beatles-lyrics-words-music-itunes), I decided to add a twist to the interactive Hangman wordgame that I did for  MITx: 6.00.1x “Introduction to Computer Science and Programming Using Python” course.
+Using Beatles lyrics data from [The Guardian’s datablog](https://www.theguardian.com/music/datablog/2010/nov/16/beatles-lyrics-words-music-itunes), I decided to add a twist to the interactive Hangman wordgame. I am currently working on an updated version that includes a web scraper that connects to Genius.com API and retreives lyrics for a specific artist to allow customization.
 
 For this game, the second player will be the computer, who will be picking a word at random. The user has 8 guesses, and with each guess the computer will print out the result and remaining available characters. These are words found in The Beatles' lyrics, so we’ll see if you are a true fan! ;)
 
