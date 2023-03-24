@@ -27,6 +27,7 @@ We are utilizing Genius.com API to scrape the lyrics. Get your free Client Acces
 
 ## Getting started
 * Start by cloning the repository: `https://github.com/dhannywi/the_beatles_hangman.git`
+* Change your directory to `the_beatles_hangman` folder
 
 ## Usage
 * Once the lyrics are loaded, you are ready to play the game
